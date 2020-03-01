@@ -13,71 +13,88 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var account = Provider.of<Account>(context);
+    return ChangeNotifierProvider(
+      create: (context) => _viewModel,
+      child: Consumer<LoginScreenViewModel>(builder: (context, viewModel, _) {
+        viewModel.retrieveServerUrl();
 
-    return Scaffold(
-      appBar: AppBar(),
-      body: Builder(
-          builder: (BuildContext context) => Padding(
-                padding: const EdgeInsets.all(16),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Form(
-                      child: Column(
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.only(bottom: 16),
-                            child: Text(
-                              "LOGIN",
-                              style: TextStyle(
-                                  fontSize: 42, fontWeight: FontWeight.w300),
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(bottom: 32),
-                            child: Text(account.getServerUrl()),
-                          ),
-                          TextFormField(
-                            key: Key("user"),
-                            decoration: InputDecoration(labelText: "user"),
-                            controller: _nameController,
-                          ),
-                          TextFormField(
-                            key: Key("password"),
-                            decoration: InputDecoration(labelText: "password"),
-                            controller: _passwordController,
-                          ),
-                          Align(
-                            alignment: Alignment.center,
-                            child: Padding(
-                              padding: const EdgeInsets.only(top: 16),
-                              child: RaisedButton(
-                                color: Color(0xFF6699cc),
-                                key: Key("login"),
-                                child: Text("login"),
-                                onPressed: () => _login(
-                                    context,
-                                    account,
-                                    _nameController.text,
-                                    _passwordController.text),
+        return Scaffold(
+          appBar: AppBar(),
+          body: Builder(
+              builder: (BuildContext context) => Padding(
+                    padding: const EdgeInsets.all(16),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Form(
+                          child: Column(
+                            children: [
+                              Text(
+                                "LOGIN",
+                                style: TextStyle(
+                                    fontSize: 42, fontWeight: FontWeight.w300),
                               ),
-                            ),
+                              Text(
+                                "@",
+                                style: TextStyle(
+                                    fontSize: 16, fontWeight: FontWeight.w300),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.fromLTRB(0, 8, 0, 32),
+                                child: _bla(viewModel),
+                              ),
+                              TextFormField(
+                                key: Key("user"),
+                                decoration: InputDecoration(labelText: "user"),
+                                controller: _nameController,
+                              ),
+                              TextFormField(
+                                key: Key("password"),
+                                decoration:
+                                    InputDecoration(labelText: "password"),
+                                controller: _passwordController,
+                              ),
+                              Align(
+                                alignment: Alignment.center,
+                                child: Padding(
+                                  padding: const EdgeInsets.only(top: 16),
+                                  child: RaisedButton(
+                                    key: Key("login"),
+                                    child: Text("LOGIN"),
+                                    onPressed: () => _login(
+                                        context,
+                                        _nameController.text.trim(),
+                                        _passwordController.text.trim(),
+                                        viewModel),
+                                  ),
+                                ),
+                              ),
+                            ],
                           ),
-                        ],
-                      ),
+                        ),
+                      ],
                     ),
-                  ],
-                ),
-              )),
+                  )),
+        );
+      }),
     );
   }
 
-  _login(BuildContext context, Account account, String name, String password) {
-    account.addUser(name, password);
-    try {
-      final user = _viewModel.login(account);
-      Navigator.pushNamed(context, "/home");
-    } catch (exception) {}
+  _login(BuildContext context, String name, String password,
+      LoginScreenViewModel viewModel) {
+
+    viewModel.login(name, password)
+        .then((token) => Navigator.pushNamed(context, "/home"))
+        .catchError(_onError(context));
+  }
+
+  _onError(BuildContext context) {
+    final snackBar = SnackBar(content: Text('ERROR WHILE TRYING TO LOGIN'));
+    Scaffold.of(context).showSnackBar(snackBar);
+  }
+
+  _bla(LoginScreenViewModel viewModel) {
+    final url = viewModel.getServerUrl();
+    return url != null ? Text(url) : Text("loading");
   }
 }
