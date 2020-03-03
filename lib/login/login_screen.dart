@@ -1,5 +1,4 @@
 import 'package:dnote/login/login_screen_view_model.dart';
-import 'package:dnote/models/account.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -89,7 +88,7 @@ class LoginScreen extends StatelessWidget {
   }
 
   _onError(BuildContext context) {
-    final snackBar = SnackBar(content: Text('ERROR WHILE TRYING TO LOGIN'));
+    final snackBar = SnackBar(content: Text('ERROR WHILE TRYING TO LOGIN'), backgroundColor: Colors.black,);
     Scaffold.of(context).showSnackBar(snackBar);
   }
 

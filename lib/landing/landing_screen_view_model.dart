@@ -1,20 +1,27 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class LandingScreenViewModel extends ChangeNotifier {
-  bool _hasServerUrl = false;
+  String _serverUrl;
 
-  Future checkServerUrl() async {
+  Future<void> checkServerUrl() async {
     final prefs = await SharedPreferences.getInstance();
-
-    _hasServerUrl = prefs.get("server_url") ? true : false;
+    _serverUrl = prefs.get("server_url");
     notifyListeners();
   }
 
-  bool isServerUrlSet() => _hasServerUrl;
+  String get serverUrl => _serverUrl;
 
   Future setDefaultServerUrl() async {
     final prefs = await SharedPreferences.getInstance();
     prefs.setString('server_url', "https://app.getdnote.com");
+  }
+
+  wipeServerUrl() async {
+    final prefs = await SharedPreferences.getInstance();
+    prefs.setString('server_url', null);
+    _serverUrl = null;
+    notifyListeners();
   }
 }
