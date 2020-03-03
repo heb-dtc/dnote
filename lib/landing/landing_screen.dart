@@ -10,30 +10,28 @@ class LandingScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => ChangeNotifierProvider(
-        create: (context) => _viewModel..checkServerUrl(),
+        create: (context) => _viewModel,
         child: Consumer<LandingScreenViewModel>(
           builder: (context, viewModel, _) {
+            viewModel.checkServerUrl();
             return Scaffold(
-              body: Builder(
-                builder: (BuildContext context) => Center(
-                  child: Padding(
-                    padding: const EdgeInsets.all(32),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.only(bottom: 8.0),
-                          child: Text(
-                            "DNOTE",
-                            style: TextStyle(
-                                fontSize: 42, fontWeight: FontWeight.w500),
-                          ),
-                        ),
-                        _buildOptions(context, viewModel)
-                      ],
+              body: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisSize: MainAxisSize.max,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(32, 32, 32, 0),
+                    child: Text(
+                      "DNOTE",
+                      style:
+                          TextStyle(fontSize: 42, fontWeight: FontWeight.w500),
                     ),
                   ),
-                ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(32, 8, 32, 32),
+                    child: _buildOptions(context, viewModel),
+                  ),
+                ],
               ),
             );
           },
