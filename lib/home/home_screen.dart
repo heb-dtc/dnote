@@ -9,7 +9,11 @@ class HomeScreen extends StatelessWidget {
         child: Padding(
           padding: EdgeInsets.all(16),
           child: Column(
-            children: <Widget>[Text("Notes")],
+            children: [
+              Text("WELCOME",
+                style:
+                TextStyle(fontSize: 42, fontWeight: FontWeight.w500),)
+            ],
           ),
         ),
       ),
