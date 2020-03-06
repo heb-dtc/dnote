@@ -1,7 +1,7 @@
 import 'package:dnote/models/server.dart';
 import 'package:flutter/foundation.dart';
 
-class ServerConfiguration extends ChangeNotifier {
+class ServerConfiguration {
   String _baseUrl;
   String _token;
 

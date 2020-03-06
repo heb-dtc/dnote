@@ -1,8 +1,9 @@
-class ServerApi {
-  final _baseUrl;
-  final _userToken;
+import 'package:dnote/models/server_configuration.dart';
 
-  ServerApi(this._baseUrl, this._userToken);
+class ServerApi {
+  final ServerConfiguration _serverConfiguration;
+
+  ServerApi(this._serverConfiguration);
 
 
   Future<void> fetchNotes() async {

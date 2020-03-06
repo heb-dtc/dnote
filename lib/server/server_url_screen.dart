@@ -1,5 +1,5 @@
 import 'package:dnote/login/login_screen_view_model.dart';
-import 'package:dnote/models/account.dart';
+import 'package:dnote/models/server_configuration.dart';
 import 'package:dnote/server/server_screen_view_model.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -59,7 +59,7 @@ class ServerUrlScreen extends StatelessWidget {
   void _setServerUrl(
       BuildContext context, String url, ServerScreenViewModel viewModel) {
     viewModel.writeServerUrl(url).then((value) {
-      final serverConfiguration = Provider.of<ServerConfiguration>(context);
+      final serverConfiguration = Provider.of<ServerConfiguration>(context, listen: false);
       serverConfiguration.baseUrl = url;
       Navigator.pushNamed(context, '/login');
     }, onError: (error) {

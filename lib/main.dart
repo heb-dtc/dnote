@@ -3,8 +3,9 @@ import 'package:dnote/landing/landing_screen.dart';
 import 'package:dnote/landing/landing_screen_view_model.dart';
 import 'package:dnote/login/login_screen.dart';
 import 'package:dnote/login/login_screen_view_model.dart';
-import 'package:dnote/models/account.dart';
+import 'package:dnote/models/server_configuration.dart';
 import 'package:dnote/server/server_screen_view_model.dart';
+import 'package:dnote/services/server_api.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -34,7 +35,7 @@ class MyApp extends StatelessWidget {
             '/': (context) => LandingScreen(LandingScreenViewModel()),
             '/server': (context) => ServerUrlScreen(ServerScreenViewModel()),
             '/login': (context) => LoginScreen(LoginScreenViewModel()),
-            '/home': (context) => HomeScreen(),
+            '/home': (context) => HomeScreen(HomeScreenViewModel(ServerApi(Provider.of<ServerConfiguration>(context, listen: false)))),
           },
         ),
       );

@@ -1,6 +1,6 @@
 import 'package:dnote/base_view.dart';
 import 'package:dnote/landing/landing_screen_view_model.dart';
-import 'package:dnote/models/account.dart';
+import 'package:dnote/models/server_configuration.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -53,9 +53,10 @@ class LandingScreen extends StatelessWidget {
           child: GestureDetector(
             onTap: () {
               final serverConfiguration =
-                  Provider.of<ServerConfiguration>(context);
+                  Provider.of<ServerConfiguration>(context, listen: false);
               serverConfiguration.baseUrl = viewModel.serverUrl;
               serverConfiguration.token = viewModel.token;
+
               Navigator.pushNamed(context, "/home");
             },
             child: Container(

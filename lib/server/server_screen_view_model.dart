@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:dnote/models/account.dart';
+import 'package:dnote/models/server_configuration.dart';
 import 'package:dnote/models/token.dart';
 import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as http;

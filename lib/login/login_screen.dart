@@ -1,5 +1,5 @@
 import 'package:dnote/login/login_screen_view_model.dart';
-import 'package:dnote/models/account.dart';
+import 'package:dnote/models/server_configuration.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
