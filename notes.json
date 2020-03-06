@@ -1,0 +1,523 @@
+{
+  "JSON": {
+    "notes": [
+      {
+        "uuid": "44bad7e9-058c-49e9-b971-17dbcad2042d",
+        "created_at": "2020-03-01T13:31:06.816501Z",
+        "updated_at": "2020-03-01T13:31:06.816501Z",
+        "content": "iterate -> meta tag parsing and rendering for links\n\nhttps://css-tricks.com/essential-meta-tags-social-media/",
+        "added_on": 1583069466816366300,
+        "public": false,
+        "usn": 56,
+        "book": {
+          "uuid": "52e18e02-f6e4-4b58-8a10-fc29841becca",
+          "label": "todo"
+        },
+        "user": {
+          "name": "",
+          "uuid": "73102ecb-6456-4f6f-ad44-b968de2a07a6"
+        }
+      },
+      {
+        "uuid": "bbfbb4da-45f3-458e-9de5-258341124e71",
+        "created_at": "2020-02-29T19:59:33.020221Z",
+        "updated_at": "2020-02-29T19:59:33.020221Z",
+        "content": "asian soup:\n- chicken bouillon\n- carrot + mushroom + ginger + garlic in sesame oil, mirin, soja sauce\n- rice noodles",
+        "added_on": 1583006373019753700,
+        "public": false,
+        "usn": 55,
+        "book": {
+          "uuid": "fdc1739c-14eb-442f-be0f-818f1a2b2ca3",
+          "label": "tia"
+        },
+        "user": {
+          "name": "",
+          "uuid": "73102ecb-6456-4f6f-ad44-b968de2a07a6"
+        }
+      },
+      {
+        "uuid": "105c237a-945d-4e49-8b38-3d26c3957e6f",
+        "created_at": "2020-02-24T12:47:40.312199Z",
+        "updated_at": "2020-02-24T12:47:40.312199Z",
+        "content": "cavatelli + sugo funghi / salsicia / thymo\n\nravioli + ricotta / spinaci\n\nfettucine + sugo ragu",
+        "added_on": 1582548460312061200,
+        "public": false,
+        "usn": 54,
+        "book": {
+          "uuid": "fdc1739c-14eb-442f-be0f-818f1a2b2ca3",
+          "label": "tia"
+        },
+        "user": {
+          "name": "",
+          "uuid": "73102ecb-6456-4f6f-ad44-b968de2a07a6"
+        }
+      },
+      {
+        "uuid": "a14b650a-95c4-4de4-a499-689d3f398eba",
+        "created_at": "2020-02-20T15:40:24.156452Z",
+        "updated_at": "2020-02-20T15:40:24.156452Z",
+        "content": "castalie\n\n- event MQTT qui vont crescendo ",
+        "added_on": 1582213224156317700,
+        "public": false,
+        "usn": 53,
+        "book": {
+          "uuid": "52e18e02-f6e4-4b58-8a10-fc29841becca",
+          "label": "todo"
+        },
+        "user": {
+          "name": "",
+          "uuid": "73102ecb-6456-4f6f-ad44-b968de2a07a6"
+        }
+      },
+      {
+        "uuid": "505ba99e-e033-4460-a766-ccfec06ce906",
+        "created_at": "2020-02-20T15:17:40.03707Z",
+        "updated_at": "2020-02-20T15:17:40.03707Z",
+        "content": "- client mail \n- suivi du temps",
+        "added_on": 1582211860036931000,
+        "public": false,
+        "usn": 52,
+        "book": {
+          "uuid": "52e18e02-f6e4-4b58-8a10-fc29841becca",
+          "label": "todo"
+        },
+        "user": {
+          "name": "",
+          "uuid": "73102ecb-6456-4f6f-ad44-b968de2a07a6"
+        }
+      },
+      {
+        "uuid": "b88b5c31-46b1-46ed-9529-726b9871dac5",
+        "created_at": "2020-02-19T17:47:05.952305Z",
+        "updated_at": "2020-02-19T17:47:05.952305Z",
+        "content": "mutuelle check:\nil y a t il un plafond sur les soins dentaires\n\nsecteur 1?\n100% santé?",
+        "added_on": 1582134425950827000,
+        "public": false,
+        "usn": 51,
+        "book": {
+          "uuid": "52e18e02-f6e4-4b58-8a10-fc29841becca",
+          "label": "todo"
+        },
+        "user": {
+          "name": "",
+          "uuid": "73102ecb-6456-4f6f-ad44-b968de2a07a6"
+        }
+      },
+      {
+        "uuid": "1f174d10-445e-4c1c-b926-905fd70b8060",
+        "created_at": "2020-02-10T15:46:31.804194Z",
+        "updated_at": "2020-02-10T15:46:31.804194Z",
+        "content": "mutuelle et prevoyance?",
+        "added_on": 1581349591804048400,
+        "public": false,
+        "usn": 50,
+        "book": {
+          "uuid": "52e18e02-f6e4-4b58-8a10-fc29841becca",
+          "label": "todo"
+        },
+        "user": {
+          "name": "",
+          "uuid": "73102ecb-6456-4f6f-ad44-b968de2a07a6"
+        }
+      },
+      {
+        "uuid": "27f8998f-bbbd-4797-97db-e4a1c70bb430",
+        "created_at": "2020-02-09T10:18:45.36436Z",
+        "updated_at": "2020-02-09T10:18:45.36436Z",
+        "content": "Foie gras poele, deglaçage au sauterne\nRavioli alla zucca\nSaint jacques grillées au four, croute persil/pan grattato/ail\nQueue lotte sauce curry",
+        "added_on": 1581243525364216600,
+        "public": false,
+        "usn": 49,
+        "book": {
+          "uuid": "fdc1739c-14eb-442f-be0f-818f1a2b2ca3",
+          "label": "tia"
+        },
+        "user": {
+          "name": "",
+          "uuid": "73102ecb-6456-4f6f-ad44-b968de2a07a6"
+        }
+      },
+      {
+        "uuid": "ab1a0c0b-aeca-4c66-ab40-532f42b4d637",
+        "created_at": "2020-02-09T10:14:39.72409Z",
+        "updated_at": "2020-02-09T10:15:25.806411Z",
+        "content": "Cecive daurade \nDos bonite roti, croute de sesame + puree patate douce et jus coco / curry",
+        "added_on": 1581243279723949000,
+        "public": false,
+        "usn": 48,
+        "book": {
+          "uuid": "fdc1739c-14eb-442f-be0f-818f1a2b2ca3",
+          "label": "tia"
+        },
+        "user": {
+          "name": "",
+          "uuid": "73102ecb-6456-4f6f-ad44-b968de2a07a6"
+        }
+      },
+      {
+        "uuid": "2bf59e1f-35fd-4143-accc-a41e4c240c54",
+        "created_at": "2020-02-05T16:59:18.87882Z",
+        "updated_at": "2020-02-05T16:59:18.87882Z",
+        "content": "tagine poulet / carottes / navet / olive + semoule",
+        "added_on": 1580921958878678800,
+        "public": false,
+        "usn": 46,
+        "book": {
+          "uuid": "fdc1739c-14eb-442f-be0f-818f1a2b2ca3",
+          "label": "tia"
+        },
+        "user": {
+          "name": "",
+          "uuid": "73102ecb-6456-4f6f-ad44-b968de2a07a6"
+        }
+      },
+      {
+        "uuid": "74bf1e3c-18f8-4790-80bf-85acecc3195d",
+        "created_at": "2020-02-02T17:23:29.798567Z",
+        "updated_at": "2020-02-02T17:23:29.798567Z",
+        "content": "Bost and bim for tomy",
+        "added_on": 1580664209798425300,
+        "public": false,
+        "usn": 45,
+        "book": {
+          "uuid": "52e18e02-f6e4-4b58-8a10-fc29841becca",
+          "label": "todo"
+        },
+        "user": {
+          "name": "",
+          "uuid": "73102ecb-6456-4f6f-ad44-b968de2a07a6"
+        }
+      },
+      {
+        "uuid": "6a1c7756-b971-4637-9618-22e5bdf8ffaf",
+        "created_at": "2020-02-01T13:37:00.183252Z",
+        "updated_at": "2020-02-01T13:37:00.183252Z",
+        "content": "foie de veau (vinaigre framboise, persil, ail)\nragout panais/celeri rave",
+        "added_on": 1580564220183121200,
+        "public": false,
+        "usn": 44,
+        "book": {
+          "uuid": "fdc1739c-14eb-442f-be0f-818f1a2b2ca3",
+          "label": "tia"
+        },
+        "user": {
+          "name": "",
+          "uuid": "73102ecb-6456-4f6f-ad44-b968de2a07a6"
+        }
+      },
+      {
+        "uuid": "38a45788-1c20-4109-bbbd-84b22b83e5a5",
+        "created_at": "2020-01-24T16:42:54.344514Z",
+        "updated_at": "2020-01-24T16:42:54.344514Z",
+        "content": "nextcloud hub",
+        "added_on": 1579884174344369000,
+        "public": false,
+        "usn": 42,
+        "book": {
+          "uuid": "52e18e02-f6e4-4b58-8a10-fc29841becca",
+          "label": "todo"
+        },
+        "user": {
+          "name": "",
+          "uuid": "73102ecb-6456-4f6f-ad44-b968de2a07a6"
+        }
+      },
+      {
+        "uuid": "45a03ece-2879-4318-b47d-77f85cd930c6",
+        "created_at": "2020-01-23T12:20:06.688531Z",
+        "updated_at": "2020-01-23T12:20:06.688531Z",
+        "content": "# reset webstorm license check\n\nrm ~/Library/Preferences/IntelijXXX/eval/*.key\n\nrm ~/Library/Preferences/*jetbrains*.plist\n\n# Remove all jetbrains keys\nopen ~/Library/Preferences/com.apple.java.util.prefs.plist\n\n# Remove all `evl*` properties\nopen ~/Library/Preferences/IntellijXXX/options/other.xml\n\n# Kill Preferences Daemon or reboot\nps ax | grep cfprefsd\n ",
+        "added_on": 1579782006688399400,
+        "public": false,
+        "usn": 41,
+        "book": {
+          "uuid": "52b19974-d8f0-47e2-a9ba-7b0a6a9c81d3",
+          "label": "AJA"
+        },
+        "user": {
+          "name": "",
+          "uuid": "73102ecb-6456-4f6f-ad44-b968de2a07a6"
+        }
+      },
+      {
+        "uuid": "a30996db-ac57-461d-8a6a-4f2c8f0eef6b",
+        "created_at": "2020-01-23T11:59:07.499601Z",
+        "updated_at": "2020-01-23T11:59:07.499601Z",
+        "content": "repaircafe mailing list + domain + SPA",
+        "added_on": 1579780747499460600,
+        "public": false,
+        "usn": 40,
+        "book": {
+          "uuid": "52e18e02-f6e4-4b58-8a10-fc29841becca",
+          "label": "todo"
+        },
+        "user": {
+          "name": "",
+          "uuid": "73102ecb-6456-4f6f-ad44-b968de2a07a6"
+        }
+      },
+      {
+        "uuid": "1542c018-8987-448c-933a-74df9680a188",
+        "created_at": "2020-01-21T14:18:57.459068Z",
+        "updated_at": "2020-01-21T14:18:57.459068Z",
+        "content": "Ask H about biologist",
+        "added_on": 1579616337458927400,
+        "public": false,
+        "usn": 39,
+        "book": {
+          "uuid": "52e18e02-f6e4-4b58-8a10-fc29841becca",
+          "label": "todo"
+        },
+        "user": {
+          "name": "",
+          "uuid": "73102ecb-6456-4f6f-ad44-b968de2a07a6"
+        }
+      },
+      {
+        "uuid": "cb5f6b26-9a3e-47fe-869a-dd465eba09e8",
+        "created_at": "2020-01-21T14:06:47.286454Z",
+        "updated_at": "2020-01-21T14:06:47.286454Z",
+        "content": "The wire lucas + price of ev zeno",
+        "added_on": 1579615607286322000,
+        "public": false,
+        "usn": 38,
+        "book": {
+          "uuid": "52e18e02-f6e4-4b58-8a10-fc29841becca",
+          "label": "todo"
+        },
+        "user": {
+          "name": "",
+          "uuid": "73102ecb-6456-4f6f-ad44-b968de2a07a6"
+        }
+      },
+      {
+        "uuid": "bead204f-7905-44d0-a3db-b8f3f2400cb2",
+        "created_at": "2020-01-14T14:52:30.535764Z",
+        "updated_at": "2020-01-14T14:52:30.535764Z",
+        "content": "when using custom docker file name, use flag -f on build command:\n`docker build -f Dockerfile.dev .`\n",
+        "added_on": 1579013550535627000,
+        "public": false,
+        "usn": 37,
+        "book": {
+          "uuid": "52b19974-d8f0-47e2-a9ba-7b0a6a9c81d3",
+          "label": "AJA"
+        },
+        "user": {
+          "name": "",
+          "uuid": "73102ecb-6456-4f6f-ad44-b968de2a07a6"
+        }
+      },
+      {
+        "uuid": "b35f3972-eda6-4bb1-abc0-46f39f9269de",
+        "created_at": "2020-01-13T10:50:59.037376Z",
+        "updated_at": "2020-01-13T10:50:59.037376Z",
+        "content": "dragon ball",
+        "added_on": 1578912659037216300,
+        "public": false,
+        "usn": 35,
+        "book": {
+          "uuid": "8e87b797-a8a1-455b-9b83-3da746aead5c",
+          "label": "toread"
+        },
+        "user": {
+          "name": "",
+          "uuid": "73102ecb-6456-4f6f-ad44-b968de2a07a6"
+        }
+      },
+      {
+        "uuid": "1704fb5a-6adc-4fdd-a727-0ae44f8bb9f8",
+        "created_at": "2020-01-13T10:50:52.661749Z",
+        "updated_at": "2020-01-13T10:50:52.661749Z",
+        "content": "saga",
+        "added_on": 1578912652661612300,
+        "public": false,
+        "usn": 34,
+        "book": {
+          "uuid": "8e87b797-a8a1-455b-9b83-3da746aead5c",
+          "label": "toread"
+        },
+        "user": {
+          "name": "",
+          "uuid": "73102ecb-6456-4f6f-ad44-b968de2a07a6"
+        }
+      },
+      {
+        "uuid": "7a5cfa93-bbc5-4bcb-b166-edadd59e2851",
+        "created_at": "2020-01-13T10:19:40.469954Z",
+        "updated_at": "2020-01-13T10:19:40.469954Z",
+        "content": "check thello money",
+        "added_on": 1578910780469806800,
+        "public": false,
+        "usn": 33,
+        "book": {
+          "uuid": "52e18e02-f6e4-4b58-8a10-fc29841becca",
+          "label": "todo"
+        },
+        "user": {
+          "name": "",
+          "uuid": "73102ecb-6456-4f6f-ad44-b968de2a07a6"
+        }
+      },
+      {
+        "uuid": "92cf0cd4-91e3-4d90-996c-bcae8ba906d7",
+        "created_at": "2020-01-13T10:10:01.139738Z",
+        "updated_at": "2020-01-13T10:10:01.139738Z",
+        "content": "change free mobile adress",
+        "added_on": 1578910201139461400,
+        "public": false,
+        "usn": 32,
+        "book": {
+          "uuid": "52e18e02-f6e4-4b58-8a10-fc29841becca",
+          "label": "todo"
+        },
+        "user": {
+          "name": "",
+          "uuid": "73102ecb-6456-4f6f-ad44-b968de2a07a6"
+        }
+      },
+      {
+        "uuid": "8359647c-1aaf-43b5-a854-716cfd9467e7",
+        "created_at": "2020-01-11T16:40:17.30989Z",
+        "updated_at": "2020-01-11T16:40:17.30989Z",
+        "content": "backup it ALL ",
+        "added_on": 1578760817309752000,
+        "public": false,
+        "usn": 31,
+        "book": {
+          "uuid": "52e18e02-f6e4-4b58-8a10-fc29841becca",
+          "label": "todo"
+        },
+        "user": {
+          "name": "",
+          "uuid": "73102ecb-6456-4f6f-ad44-b968de2a07a6"
+        }
+      },
+      {
+        "uuid": "5bc3c15a-128b-43c1-9476-dd6151af27a2",
+        "created_at": "2020-01-11T16:40:05.492195Z",
+        "updated_at": "2020-01-11T16:40:05.492195Z",
+        "content": "answer EC",
+        "added_on": 1578760805492051500,
+        "public": false,
+        "usn": 30,
+        "book": {
+          "uuid": "52e18e02-f6e4-4b58-8a10-fc29841becca",
+          "label": "todo"
+        },
+        "user": {
+          "name": "",
+          "uuid": "73102ecb-6456-4f6f-ad44-b968de2a07a6"
+        }
+      },
+      {
+        "uuid": "abaa5bc7-91e9-4004-ae97-5f3397bf880e",
+        "created_at": "2020-01-11T16:39:53.694307Z",
+        "updated_at": "2020-01-11T16:39:53.694307Z",
+        "content": "open dell xps",
+        "added_on": 1578760793693969000,
+        "public": false,
+        "usn": 29,
+        "book": {
+          "uuid": "52e18e02-f6e4-4b58-8a10-fc29841becca",
+          "label": "todo"
+        },
+        "user": {
+          "name": "",
+          "uuid": "73102ecb-6456-4f6f-ad44-b968de2a07a6"
+        }
+      },
+      {
+        "uuid": "cae22a15-fc28-4b5a-853e-f0e5e5be0446",
+        "created_at": "2020-01-06T17:40:36.988013Z",
+        "updated_at": "2020-01-06T17:40:36.988013Z",
+        "content": "website herboriste",
+        "added_on": 1578332436987870000,
+        "public": false,
+        "usn": 25,
+        "book": {
+          "uuid": "52e18e02-f6e4-4b58-8a10-fc29841becca",
+          "label": "todo"
+        },
+        "user": {
+          "name": "",
+          "uuid": "73102ecb-6456-4f6f-ad44-b968de2a07a6"
+        }
+      },
+      {
+        "uuid": "1dc5d141-a172-4f07-8607-a338ad9c6ccd",
+        "created_at": "2020-01-05T17:31:57.931198Z",
+        "updated_at": "2020-01-05T17:31:57.931198Z",
+        "content": "migration apache -> nginx",
+        "added_on": 1578245517931054000,
+        "public": false,
+        "usn": 20,
+        "book": {
+          "uuid": "52e18e02-f6e4-4b58-8a10-fc29841becca",
+          "label": "todo"
+        },
+        "user": {
+          "name": "",
+          "uuid": "73102ecb-6456-4f6f-ad44-b968de2a07a6"
+        }
+      },
+      {
+        "uuid": "539767d9-67ad-4dec-87a1-f61b6de53b7f",
+        "created_at": "2020-01-05T17:14:21.156739Z",
+        "updated_at": "2020-01-05T17:14:21.156739Z",
+        "content": "do business plan\n",
+        "added_on": 1578244461156556800,
+        "public": false,
+        "usn": 18,
+        "book": {
+          "uuid": "52e18e02-f6e4-4b58-8a10-fc29841becca",
+          "label": "todo"
+        },
+        "user": {
+          "name": "",
+          "uuid": "73102ecb-6456-4f6f-ad44-b968de2a07a6"
+        }
+      },
+      {
+        "uuid": "79932143-217c-4b37-9e54-49c5574c5e53",
+        "created_at": "2019-12-20T11:02:54.579119Z",
+        "updated_at": "2019-12-20T11:02:54.579119Z",
+        "content": "- write down federica software idea",
+        "added_on": 1576839774579008500,
+        "public": false,
+        "usn": 14,
+        "book": {
+          "uuid": "52e18e02-f6e4-4b58-8a10-fc29841becca",
+          "label": "todo"
+        },
+        "user": {
+          "name": "",
+          "uuid": "73102ecb-6456-4f6f-ad44-b968de2a07a6"
+        }
+      },
+      {
+        "uuid": "08a95e73-299a-4f82-af63-21158a866eb4",
+        "created_at": "2019-12-20T11:02:45.466057Z",
+        "updated_at": "2019-12-20T11:02:45.466057Z",
+        "content": "- first version of eugi's platform",
+        "added_on": 1576839765465812000,
+        "public": false,
+        "usn": 13,
+        "book": {
+          "uuid": "52e18e02-f6e4-4b58-8a10-fc29841becca",
+          "label": "todo"
+        },
+        "user": {
+          "name": "",
+          "uuid": "73102ecb-6456-4f6f-ad44-b968de2a07a6"
+        }
+      }
+    ],
+    "total": 37
+  },
+  "Response Payload": {
+    "EDITOR_CONFIG": {
+      "text": "{\"notes\":[{\"uuid\":\"44bad7e9-058c-49e9-b971-17dbcad2042d\",\"created_at\":\"2020-03-01T13:31:06.816501Z\",\"updated_at\":\"2020-03-01T13:31:06.816501Z\",\"content\":\"iterate -\\u003e meta tag parsing and rendering for links\\n\\nhttps://css-tricks.com/essential-meta-tags-social-media/\",\"added_on\":1583069466816366225,\"public\":false,\"usn\":56,\"book\":{\"uuid\":\"52e18e02-f6e4-4b58-8a10-fc29841becca\",\"label\":\"todo\"},\"user\":{\"name\":\"\",\"uuid\":\"73102ecb-6456-4f6f-ad44-b968de2a07a6\"}},{\"uuid\":\"bbfbb4da-45f3-458e-9de5-258341124e71\",\"created_at\":\"2020-02-29T19:59:33.020221Z\",\"updated_at\":\"2020-02-29T19:59:33.020221Z\",\"content\":\"asian soup:\\n- chicken bouillon\\n- carrot + mushroom + ginger + garlic in sesame oil, mirin, soja sauce\\n- rice noodles\",\"added_on\":1583006373019753699,\"public\":false,\"usn\":55,\"book\":{\"uuid\":\"fdc1739c-14eb-442f-be0f-818f1a2b2ca3\",\"label\":\"tia\"},\"user\":{\"name\":\"\",\"uuid\":\"73102ecb-6456-4f6f-ad44-b968de2a07a6\"}},{\"uuid\":\"105c237a-945d-4e49-8b38-3d26c3957e6f\",\"created_at\":\"2020-02-24T12:47:40.312199Z\",\"updated_at\":\"2020-02-24T12:47:40.312199Z\",\"content\":\"cavatelli + sugo funghi / salsicia / thymo\\n\\nravioli + ricotta / spinaci\\n\\nfettucine + sugo ragu\",\"added_on\":1582548460312061291,\"public\":false,\"usn\":54,\"book\":{\"uuid\":\"fdc1739c-14eb-442f-be0f-818f1a2b2ca3\",\"label\":\"tia\"},\"user\":{\"name\":\"\",\"uuid\":\"73102ecb-6456-4f6f-ad44-b968de2a07a6\"}},{\"uuid\":\"a14b650a-95c4-4de4-a499-689d3f398eba\",\"created_at\":\"2020-02-20T15:40:24.156452Z\",\"updated_at\":\"2020-02-20T15:40:24.156452Z\",\"content\":\"castalie\\n\\n- event MQTT qui vont crescendo \",\"added_on\":1582213224156317628,\"public\":false,\"usn\":53,\"book\":{\"uuid\":\"52e18e02-f6e4-4b58-8a10-fc29841becca\",\"label\":\"todo\"},\"user\":{\"name\":\"\",\"uuid\":\"73102ecb-6456-4f6f-ad44-b968de2a07a6\"}},{\"uuid\":\"505ba99e-e033-4460-a766-ccfec06ce906\",\"created_at\":\"2020-02-20T15:17:40.03707Z\",\"updated_at\":\"2020-02-20T15:17:40.03707Z\",\"content\":\"- client mail \\n- suivi du temps\",\"added_on\":1582211860036931092,\"public\":false,\"usn\":52,\"book\":{\"uuid\":\"52e18e02-f6e4-4b58-8a10-fc29841becca\",\"label\":\"todo\"},\"user\":{\"name\":\"\",\"uuid\":\"73102ecb-6456-4f6f-ad44-b968de2a07a6\"}},{\"uuid\":\"b88b5c31-46b1-46ed-9529-726b9871dac5\",\"created_at\":\"2020-02-19T17:47:05.952305Z\",\"updated_at\":\"2020-02-19T17:47:05.952305Z\",\"content\":\"mutuelle check:\\nil y a t il un plafond sur les soins dentaires\\n\\nsecteur 1?\\n100% santé?\",\"added_on\":1582134425950826973,\"public\":false,\"usn\":51,\"book\":{\"uuid\":\"52e18e02-f6e4-4b58-8a10-fc29841becca\",\"label\":\"todo\"},\"user\":{\"name\":\"\",\"uuid\":\"73102ecb-6456-4f6f-ad44-b968de2a07a6\"}},{\"uuid\":\"1f174d10-445e-4c1c-b926-905fd70b8060\",\"created_at\":\"2020-02-10T15:46:31.804194Z\",\"updated_at\":\"2020-02-10T15:46:31.804194Z\",\"content\":\"mutuelle et prevoyance?\",\"added_on\":1581349591804048353,\"public\":false,\"usn\":50,\"book\":{\"uuid\":\"52e18e02-f6e4-4b58-8a10-fc29841becca\",\"label\":\"todo\"},\"user\":{\"name\":\"\",\"uuid\":\"73102ecb-6456-4f6f-ad44-b968de2a07a6\"}},{\"uuid\":\"27f8998f-bbbd-4797-97db-e4a1c70bb430\",\"created_at\":\"2020-02-09T10:18:45.36436Z\",\"updated_at\":\"2020-02-09T10:18:45.36436Z\",\"content\":\"Foie gras poele, deglaçage au sauterne\\nRavioli alla zucca\\nSaint jacques grillées au four, croute persil/pan grattato/ail\\nQueue lotte sauce curry\",\"added_on\":1581243525364216664,\"public\":false,\"usn\":49,\"book\":{\"uuid\":\"fdc1739c-14eb-442f-be0f-818f1a2b2ca3\",\"label\":\"tia\"},\"user\":{\"name\":\"\",\"uuid\":\"73102ecb-6456-4f6f-ad44-b968de2a07a6\"}},{\"uuid\":\"ab1a0c0b-aeca-4c66-ab40-532f42b4d637\",\"created_at\":\"2020-02-09T10:14:39.72409Z\",\"updated_at\":\"2020-02-09T10:15:25.806411Z\",\"content\":\"Cecive daurade \\nDos bonite roti, croute de sesame + puree patate douce et jus coco / curry\",\"added_on\":1581243279723949163,\"public\":false,\"usn\":48,\"book\":{\"uuid\":\"fdc1739c-14eb-442f-be0f-818f1a2b2ca3\",\"label\":\"tia\"},\"user\":{\"name\":\"\",\"uuid\":\"73102ecb-6456-4f6f-ad44-b968de2a07a6\"}},{\"uuid\":\"2bf59e1f-35fd-4143-accc-a41e4c240c54\",\"created_at\":\"2020-02-05T16:59:18.87882Z\",\"updated_at\":\"2020-02-05T16:59:18.87882Z\",\"content\":\"tagine poulet / carottes / navet / olive + semoule\",\"added_on\":1580921958878678875,\"public\":false,\"usn\":46,\"book\":{\"uuid\":\"fdc1739c-14eb-442f-be0f-818f1a2b2ca3\",\"label\":\"tia\"},\"user\":{\"name\":\"\",\"uuid\":\"73102ecb-6456-4f6f-ad44-b968de2a07a6\"}},{\"uuid\":\"74bf1e3c-18f8-4790-80bf-85acecc3195d\",\"created_at\":\"2020-02-02T17:23:29.798567Z\",\"updated_at\":\"2020-02-02T17:23:29.798567Z\",\"content\":\"Bost and bim for tomy\",\"added_on\":1580664209798425346,\"public\":false,\"usn\":45,\"book\":{\"uuid\":\"52e18e02-f6e4-4b58-8a10-fc29841becca\",\"label\":\"todo\"},\"user\":{\"name\":\"\",\"uuid\":\"73102ecb-6456-4f6f-ad44-b968de2a07a6\"}},{\"uuid\":\"6a1c7756-b971-4637-9618-22e5bdf8ffaf\",\"created_at\":\"2020-02-01T13:37:00.183252Z\",\"updated_at\":\"2020-02-01T13:37:00.183252Z\",\"content\":\"foie de veau (vinaigre framboise, persil, ail)\\nragout panais/celeri rave\",\"added_on\":1580564220183121163,\"public\":false,\"usn\":44,\"book\":{\"uuid\":\"fdc1739c-14eb-442f-be0f-818f1a2b2ca3\",\"label\":\"tia\"},\"user\":{\"name\":\"\",\"uuid\":\"73102ecb-6456-4f6f-ad44-b968de2a07a6\"}},{\"uuid\":\"38a45788-1c20-4109-bbbd-84b22b83e5a5\",\"created_at\":\"2020-01-24T16:42:54.344514Z\",\"updated_at\":\"2020-01-24T16:42:54.344514Z\",\"content\":\"nextcloud hub\",\"added_on\":1579884174344368773,\"public\":false,\"usn\":42,\"book\":{\"uuid\":\"52e18e02-f6e4-4b58-8a10-fc29841becca\",\"label\":\"todo\"},\"user\":{\"name\":\"\",\"uuid\":\"73102ecb-6456-4f6f-ad44-b968de2a07a6\"}},{\"uuid\":\"45a03ece-2879-4318-b47d-77f85cd930c6\",\"created_at\":\"2020-01-23T12:20:06.688531Z\",\"updated_at\":\"2020-01-23T12:20:06.688531Z\",\"content\":\"# reset webstorm license check\\n\\nrm ~/Library/Preferences/IntelijXXX/eval/*.key\\n\\nrm ~/Library/Preferences/*jetbrains*.plist\\n\\n# Remove all jetbrains keys\\nopen ~/Library/Preferences/com.apple.java.util.prefs.plist\\n\\n# Remove all `evl*` properties\\nopen ~/Library/Preferences/IntellijXXX/options/other.xml\\n\\n# Kill Preferences Daemon or reboot\\nps ax | grep cfprefsd\\n \",\"added_on\":1579782006688399287,\"public\":false,\"usn\":41,\"book\":{\"uuid\":\"52b19974-d8f0-47e2-a9ba-7b0a6a9c81d3\",\"label\":\"AJA\"},\"user\":{\"name\":\"\",\"uuid\":\"73102ecb-6456-4f6f-ad44-b968de2a07a6\"}},{\"uuid\":\"a30996db-ac57-461d-8a6a-4f2c8f0eef6b\",\"created_at\":\"2020-01-23T11:59:07.499601Z\",\"updated_at\":\"2020-01-23T11:59:07.499601Z\",\"content\":\"repaircafe mailing list + domain + SPA\",\"added_on\":1579780747499460651,\"public\":false,\"usn\":40,\"book\":{\"uuid\":\"52e18e02-f6e4-4b58-8a10-fc29841becca\",\"label\":\"todo\"},\"user\":{\"name\":\"\",\"uuid\":\"73102ecb-6456-4f6f-ad44-b968de2a07a6\"}},{\"uuid\":\"1542c018-8987-448c-933a-74df9680a188\",\"created_at\":\"2020-01-21T14:18:57.459068Z\",\"updated_at\":\"2020-01-21T14:18:57.459068Z\",\"content\":\"Ask H about biologist\",\"added_on\":1579616337458927253,\"public\":false,\"usn\":39,\"book\":{\"uuid\":\"52e18e02-f6e4-4b58-8a10-fc29841becca\",\"label\":\"todo\"},\"user\":{\"name\":\"\",\"uuid\":\"73102ecb-6456-4f6f-ad44-b968de2a07a6\"}},{\"uuid\":\"cb5f6b26-9a3e-47fe-869a-dd465eba09e8\",\"created_at\":\"2020-01-21T14:06:47.286454Z\",\"updated_at\":\"2020-01-21T14:06:47.286454Z\",\"content\":\"The wire lucas + price of ev zeno\",\"added_on\":1579615607286321827,\"public\":false,\"usn\":38,\"book\":{\"uuid\":\"52e18e02-f6e4-4b58-8a10-fc29841becca\",\"label\":\"todo\"},\"user\":{\"name\":\"\",\"uuid\":\"73102ecb-6456-4f6f-ad44-b968de2a07a6\"}},{\"uuid\":\"bead204f-7905-44d0-a3db-b8f3f2400cb2\",\"created_at\":\"2020-01-14T14:52:30.535764Z\",\"updated_at\":\"2020-01-14T14:52:30.535764Z\",\"content\":\"when using custom docker file name, use flag -f on build command:\\n`docker build -f Dockerfile.dev .`\\n\",\"added_on\":1579013550535626964,\"public\":false,\"usn\":37,\"book\":{\"uuid\":\"52b19974-d8f0-47e2-a9ba-7b0a6a9c81d3\",\"label\":\"AJA\"},\"user\":{\"name\":\"\",\"uuid\":\"73102ecb-6456-4f6f-ad44-b968de2a07a6\"}},{\"uuid\":\"b35f3972-eda6-4bb1-abc0-46f39f9269de\",\"created_at\":\"2020-01-13T10:50:59.037376Z\",\"updated_at\":\"2020-01-13T10:50:59.037376Z\",\"content\":\"dragon ball\",\"added_on\":1578912659037216263,\"public\":false,\"usn\":35,\"book\":{\"uuid\":\"8e87b797-a8a1-455b-9b83-3da746aead5c\",\"label\":\"toread\"},\"user\":{\"name\":\"\",\"uuid\":\"73102ecb-6456-4f6f-ad44-b968de2a07a6\"}},{\"uuid\":\"1704fb5a-6adc-4fdd-a727-0ae44f8bb9f8\",\"created_at\":\"2020-01-13T10:50:52.661749Z\",\"updated_at\":\"2020-01-13T10:50:52.661749Z\",\"content\":\"saga\",\"added_on\":1578912652661612194,\"public\":false,\"usn\":34,\"book\":{\"uuid\":\"8e87b797-a8a1-455b-9b83-3da746aead5c\",\"label\":\"toread\"},\"user\":{\"name\":\"\",\"uuid\":\"73102ecb-6456-4f6f-ad44-b968de2a07a6\"}},{\"uuid\":\"7a5cfa93-bbc5-4bcb-b166-edadd59e2851\",\"created_at\":\"2020-01-13T10:19:40.469954Z\",\"updated_at\":\"2020-01-13T10:19:40.469954Z\",\"content\":\"check thello money\",\"added_on\":1578910780469806914,\"public\":false,\"usn\":33,\"book\":{\"uuid\":\"52e18e02-f6e4-4b58-8a10-fc29841becca\",\"label\":\"todo\"},\"user\":{\"name\":\"\",\"uuid\":\"73102ecb-6456-4f6f-ad44-b968de2a07a6\"}},{\"uuid\":\"92cf0cd4-91e3-4d90-996c-bcae8ba906d7\",\"created_at\":\"2020-01-13T10:10:01.139738Z\",\"updated_at\":\"2020-01-13T10:10:01.139738Z\",\"content\":\"change free mobile adress\",\"added_on\":1578910201139461358,\"public\":false,\"usn\":32,\"book\":{\"uuid\":\"52e18e02-f6e4-4b58-8a10-fc29841becca\",\"label\":\"todo\"},\"user\":{\"name\":\"\",\"uuid\":\"73102ecb-6456-4f6f-ad44-b968de2a07a6\"}},{\"uuid\":\"8359647c-1aaf-43b5-a854-716cfd9467e7\",\"created_at\":\"2020-01-11T16:40:17.30989Z\",\"updated_at\":\"2020-01-11T16:40:17.30989Z\",\"content\":\"backup it ALL \",\"added_on\":1578760817309752060,\"public\":false,\"usn\":31,\"book\":{\"uuid\":\"52e18e02-f6e4-4b58-8a10-fc29841becca\",\"label\":\"todo\"},\"user\":{\"name\":\"\",\"uuid\":\"73102ecb-6456-4f6f-ad44-b968de2a07a6\"}},{\"uuid\":\"5bc3c15a-128b-43c1-9476-dd6151af27a2\",\"created_at\":\"2020-01-11T16:40:05.492195Z\",\"updated_at\":\"2020-01-11T16:40:05.492195Z\",\"content\":\"answer EC\",\"added_on\":1578760805492051389,\"public\":false,\"usn\":30,\"book\":{\"uuid\":\"52e18e02-f6e4-4b58-8a10-fc29841becca\",\"label\":\"todo\"},\"user\":{\"name\":\"\",\"uuid\":\"73102ecb-6456-4f6f-ad44-b968de2a07a6\"}},{\"uuid\":\"abaa5bc7-91e9-4004-ae97-5f3397bf880e\",\"created_at\":\"2020-01-11T16:39:53.694307Z\",\"updated_at\":\"2020-01-11T16:39:53.694307Z\",\"content\":\"open dell xps\",\"added_on\":1578760793693969017,\"public\":false,\"usn\":29,\"book\":{\"uuid\":\"52e18e02-f6e4-4b58-8a10-fc29841becca\",\"label\":\"todo\"},\"user\":{\"name\":\"\",\"uuid\":\"73102ecb-6456-4f6f-ad44-b968de2a07a6\"}},{\"uuid\":\"cae22a15-fc28-4b5a-853e-f0e5e5be0446\",\"created_at\":\"2020-01-06T17:40:36.988013Z\",\"updated_at\":\"2020-01-06T17:40:36.988013Z\",\"content\":\"website herboriste\",\"added_on\":1578332436987870017,\"public\":false,\"usn\":25,\"book\":{\"uuid\":\"52e18e02-f6e4-4b58-8a10-fc29841becca\",\"label\":\"todo\"},\"user\":{\"name\":\"\",\"uuid\":\"73102ecb-6456-4f6f-ad44-b968de2a07a6\"}},{\"uuid\":\"1dc5d141-a172-4f07-8607-a338ad9c6ccd\",\"created_at\":\"2020-01-05T17:31:57.931198Z\",\"updated_at\":\"2020-01-05T17:31:57.931198Z\",\"content\":\"migration apache -\\u003e nginx\",\"added_on\":1578245517931054021,\"public\":false,\"usn\":20,\"book\":{\"uuid\":\"52e18e02-f6e4-4b58-8a10-fc29841becca\",\"label\":\"todo\"},\"user\":{\"name\":\"\",\"uuid\":\"73102ecb-6456-4f6f-ad44-b968de2a07a6\"}},{\"uuid\":\"539767d9-67ad-4dec-87a1-f61b6de53b7f\",\"created_at\":\"2020-01-05T17:14:21.156739Z\",\"updated_at\":\"2020-01-05T17:14:21.156739Z\",\"content\":\"do business plan\\n\",\"added_on\":1578244461156556828,\"public\":false,\"usn\":18,\"book\":{\"uuid\":\"52e18e02-f6e4-4b58-8a10-fc29841becca\",\"label\":\"todo\"},\"user\":{\"name\":\"\",\"uuid\":\"73102ecb-6456-4f6f-ad44-b968de2a07a6\"}},{\"uuid\":\"79932143-217c-4b37-9e54-49c5574c5e53\",\"created_at\":\"2019-12-20T11:02:54.579119Z\",\"updated_at\":\"2019-12-20T11:02:54.579119Z\",\"content\":\"- write down federica software idea\",\"added_on\":1576839774579008465,\"public\":false,\"usn\":14,\"book\":{\"uuid\":\"52e18e02-f6e4-4b58-8a10-fc29841becca\",\"label\":\"todo\"},\"user\":{\"name\":\"\",\"uuid\":\"73102ecb-6456-4f6f-ad44-b968de2a07a6\"}},{\"uuid\":\"08a95e73-299a-4f82-af63-21158a866eb4\",\"created_at\":\"2019-12-20T11:02:45.466057Z\",\"updated_at\":\"2019-12-20T11:02:45.466057Z\",\"content\":\"- first version of eugi's platform\",\"added_on\":1576839765465811863,\"public\":false,\"usn\":13,\"book\":{\"uuid\":\"52e18e02-f6e4-4b58-8a10-fc29841becca\",\"label\":\"todo\"},\"user\":{\"name\":\"\",\"uuid\":\"73102ecb-6456-4f6f-ad44-b968de2a07a6\"}}],\"total\":37}\n",
+      "mode": "application/json"
+    }
+  }
+}

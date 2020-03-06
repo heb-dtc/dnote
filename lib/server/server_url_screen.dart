@@ -13,7 +13,8 @@ class ServerUrlScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) => ChangeNotifierProvider(
         create: (context) => _viewModel,
-        child: Consumer<ServerScreenViewModel>(builder: (context, viewModel, _) {
+        child:
+            Consumer<ServerScreenViewModel>(builder: (context, viewModel, _) {
           return Scaffold(
             appBar: AppBar(
               title: Text("Server"),
@@ -40,10 +41,8 @@ class ServerUrlScreen extends StatelessWidget {
                                     child: RaisedButton(
                                       key: Key("go"),
                                       child: Text("GO"),
-                                      onPressed: () =>
-                                        _setServerUrl(context,
-                                            _serverUrlController.text,
-                                            viewModel),
+                                      onPressed: () => _setServerUrl(context,
+                                          _serverUrlController.text, viewModel),
                                     ),
                                   ),
                                 ),
@@ -60,6 +59,8 @@ class ServerUrlScreen extends StatelessWidget {
   void _setServerUrl(
       BuildContext context, String url, ServerScreenViewModel viewModel) {
     viewModel.writeServerUrl(url).then((value) {
+      final serverConfiguration = Provider.of<ServerConfiguration>(context);
+      serverConfiguration.baseUrl = url;
       Navigator.pushNamed(context, '/login');
     }, onError: (error) {
       final snackBar = SnackBar(content: Text('SERVER URL NOT VALID'));

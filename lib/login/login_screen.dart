@@ -1,4 +1,5 @@
 import 'package:dnote/login/login_screen_view_model.dart';
+import 'package:dnote/models/account.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -81,14 +82,18 @@ class LoginScreen extends StatelessWidget {
 
   _login(BuildContext context, String name, String password,
       LoginScreenViewModel viewModel) {
-
-    viewModel.login(name, password)
-        .then((token) => Navigator.pushNamed(context, "/home"))
-        .catchError(_onError(context));
+    viewModel.login(name, password).then((token) {
+      final serverConfiguration = Provider.of<ServerConfiguration>(context, listen: false);
+      serverConfiguration.token = token;
+      Navigator.pushNamed(context, "/home");
+    }).catchError(_onError(context));
   }
 
   _onError(BuildContext context) {
-    final snackBar = SnackBar(content: Text('ERROR WHILE TRYING TO LOGIN'), backgroundColor: Colors.black,);
+    final snackBar = SnackBar(
+      content: Text('ERROR WHILE TRYING TO LOGIN'),
+      backgroundColor: Colors.black,
+    );
     Scaffold.of(context).showSnackBar(snackBar);
   }
 

@@ -1,5 +1,6 @@
 import 'package:dnote/base_view.dart';
 import 'package:dnote/landing/landing_screen_view_model.dart';
+import 'package:dnote/models/account.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -12,7 +13,7 @@ class LandingScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) => BaseView<LandingScreenViewModel>(
       model: _viewModel,
-      onModelReady: (viewModel) => viewModel.checkServerUrl(),
+      onModelReady: (viewModel) => viewModel.checkConfiguration(),
       builder: (context, viewModel, child) => Scaffold(
             body: Column(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -34,18 +35,97 @@ class LandingScreen extends StatelessWidget {
           ));
 
   Widget _buildOptions(BuildContext context, LandingScreenViewModel viewModel) {
-    if (viewModel.serverUrl != null) {
+    if (viewModel.serverUrl != null && viewModel.token != null) {
       return Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+        Text(
+          "Server URL -> " + viewModel.serverUrl,
+          style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400),
+        ),
         Padding(
           padding: const EdgeInsets.only(bottom: 48),
-          child: Text("Server URL -> " + viewModel.serverUrl,
+          child: Text(
+            "Token -> " + viewModel.token,
             style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400),
           ),
         ),
         Padding(
           padding: const EdgeInsets.only(bottom: 32),
           child: GestureDetector(
-            onTap: () => Navigator.pushNamed(context, "/login"),
+            onTap: () {
+              final serverConfiguration =
+                  Provider.of<ServerConfiguration>(context);
+              serverConfiguration.baseUrl = viewModel.serverUrl;
+              serverConfiguration.token = viewModel.token;
+              Navigator.pushNamed(context, "/home");
+            },
+            child: Container(
+              decoration: BoxDecoration(
+                  border: Border.all(width: 1.0, color: Colors.grey),
+                  borderRadius: BorderRadius.all(Radius.circular(5.0))),
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "use current configuration",
+                      style:
+                          TextStyle(fontSize: 16, fontWeight: FontWeight.w300),
+                    ),
+                    Text(
+                      ">",
+                      style:
+                          TextStyle(fontSize: 16, fontWeight: FontWeight.w300),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ),
+        GestureDetector(
+          onTap: () => viewModel.wipeConfiguration(),
+          child: Container(
+            decoration: BoxDecoration(
+                border: Border.all(width: 1.0, color: Colors.grey),
+                borderRadius: BorderRadius.all(Radius.circular(5.0))),
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    "wipe current configuration",
+                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.w300),
+                  ),
+                  Text(
+                    ">",
+                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.w300),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ),
+      ]);
+    } else if (viewModel.serverUrl != null && viewModel.token == null) {
+      return Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+        Padding(
+          padding: const EdgeInsets.only(bottom: 48),
+          child: Text(
+            "Server URL -> " + viewModel.serverUrl,
+            style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400),
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.only(bottom: 32),
+          child: GestureDetector(
+            onTap: () {
+              final serverConfiguration =
+                  Provider.of<ServerConfiguration>(context, listen: false);
+              serverConfiguration.baseUrl = viewModel.serverUrl;
+              Navigator.pushNamed(context, "/login");
+            },
             child: Container(
               decoration: BoxDecoration(
                   border: Border.all(width: 1.0, color: Colors.grey),
@@ -58,12 +138,12 @@ class LandingScreen extends StatelessWidget {
                     Text(
                       "use current server URL",
                       style:
-                      TextStyle(fontSize: 16, fontWeight: FontWeight.w300),
+                          TextStyle(fontSize: 16, fontWeight: FontWeight.w300),
                     ),
                     Text(
                       ">",
                       style:
-                      TextStyle(fontSize: 16, fontWeight: FontWeight.w300),
+                          TextStyle(fontSize: 16, fontWeight: FontWeight.w300),
                     ),
                   ],
                 ),
@@ -72,7 +152,7 @@ class LandingScreen extends StatelessWidget {
           ),
         ),
         GestureDetector(
-          onTap: () => viewModel.wipeServerUrl(),
+          onTap: () => viewModel.wipeConfiguration(),
           child: Container(
             decoration: BoxDecoration(
                 border: Border.all(width: 1.0, color: Colors.grey),

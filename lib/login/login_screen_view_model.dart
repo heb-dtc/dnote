@@ -23,7 +23,7 @@ class LoginScreenViewModel extends ChangeNotifier {
   }
 
   Future<Token> login(String userName, String password) async {
-    final response = await signIn(userName, password);
+    final response = await _signIn(userName, password);
 
     if (response.statusCode == 200) {
       final token = Token.fromJson(json.decode(response.body));
@@ -38,7 +38,7 @@ class LoginScreenViewModel extends ChangeNotifier {
     }
   }
 
-  Future<http.Response> signIn(String userName, String password) {
+  Future<http.Response> _signIn(String userName, String password) {
     final endPoint = _serverUrl + '/api/v3/signin';
     developer.log("login @ " + endPoint);
 

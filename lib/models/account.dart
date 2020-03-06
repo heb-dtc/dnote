@@ -1,19 +1,13 @@
 import 'package:dnote/models/server.dart';
 import 'package:flutter/foundation.dart';
 
-class Account extends ChangeNotifier {
-  Server _server;
-  String _userName;
-  String _password;
+class ServerConfiguration extends ChangeNotifier {
+  String _baseUrl;
+  String _token;
 
-  getServerUrl() => _server.get();
-  getUserName() => _userName;
-  getPassword() => _password;
+  set baseUrl(value) => _baseUrl;
+  set token(value) => _token;
 
-  addServer(String url) => _server = Server(url);
-
-  addUser(String name, String password) {
-    _userName = name;
-    _password = password;
-  }
+  String get baseUrl => _baseUrl;
+  String get token => _token;
 }
