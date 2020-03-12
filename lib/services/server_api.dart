@@ -10,17 +10,24 @@ class ServerApi {
 
   ServerApi(this._serverConfiguration);
 
-
   Future<Home> fetchNotes() async {
-    developer.log("fetch note -> " + _serverConfiguration.baseUrl);
     final endPoint = _serverConfiguration.baseUrl + '/api/v3/notes?page=1';
+    final cookie = "id=${_serverConfiguration.token}; __stripe_mid=3187a7b7-2616-45c0-afda-c3e2298a7be7";
     developer.log("fetch note -> " + endPoint);
 
-    final homeJson = await http.get(endPoint,
+    final homeResponse = await http.get(endPoint,
         headers: {
-          'Content-Type': 'application/json; charset=UTF-8',
+          'Cookie': cookie,
         });
 
-    return Home.fromJson(json.decode(homeJson.body));
+
+    if (homeResponse.statusCode == 200) {
+      developer.log("note -> " + homeResponse.body);
+      return Home.fromJson(json.decode(homeResponse.body));
+    }
+
+    developer.log("error -> ${homeResponse.statusCode}");
+
+    throw Future.error("");
   }
 }

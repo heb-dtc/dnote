@@ -13,7 +13,7 @@ class LandingScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) => BaseView<LandingScreenViewModel>(
       model: _viewModel,
-      onModelReady: (viewModel) => viewModel.checkConfiguration(),
+      onModelReady: (viewModel) => viewModel.loadConfiguration(),
       builder: (context, viewModel, child) => Scaffold(
             body: Column(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -52,10 +52,8 @@ class LandingScreen extends StatelessWidget {
           padding: const EdgeInsets.only(bottom: 32),
           child: GestureDetector(
             onTap: () {
-              final serverConfiguration =
-                  Provider.of<ServerConfiguration>(context, listen: false);
-              serverConfiguration.baseUrl = viewModel.serverUrl;
-              serverConfiguration.token = viewModel.token;
+              Provider.of<ServerConfiguration>(context, listen: false).baseUrl = viewModel.serverUrl;
+              Provider.of<ServerConfiguration>(context, listen: false).token = viewModel.token;
 
               Navigator.pushNamed(context, "/home");
             },
@@ -122,8 +120,7 @@ class LandingScreen extends StatelessWidget {
           padding: const EdgeInsets.only(bottom: 32),
           child: GestureDetector(
             onTap: () {
-              final serverConfiguration =
-                  Provider.of<ServerConfiguration>(context, listen: false);
+              final serverConfiguration = Provider.of<ServerConfiguration>(context, listen: false);
               serverConfiguration.baseUrl = viewModel.serverUrl;
               Navigator.pushNamed(context, "/login");
             },

@@ -9,7 +9,7 @@ class LandingScreenViewModel extends ChangeNotifier {
   String _serverUrl;
   String _token;
 
-  Future<void> checkConfiguration() async {
+  Future<void> loadConfiguration() async {
     await _loadToken();
     await _loadServerUrl();
     notifyListeners();
@@ -40,9 +40,5 @@ class LandingScreenViewModel extends ChangeNotifier {
     _serverUrl = null;
     _token = null;
     notifyListeners();
-  }
-
-  Future loadConfiguration(BuildContext context) async {
-
   }
 }
