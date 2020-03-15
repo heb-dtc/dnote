@@ -1,3 +1,4 @@
+import 'package:dnote/models/home.dart';
 import 'package:dnote/models/note.dart';
 import 'package:dnote/services/server_api.dart';
 import 'package:flutter/material.dart';
@@ -5,11 +6,14 @@ import 'package:flutter/material.dart';
 class HomeScreenViewModel extends ChangeNotifier {
   final ServerApi _api;
 
-  List<Note> _notes;
+  Home _home;
 
   HomeScreenViewModel(this._api);
 
+  List<Note> get notes => _home != null ? _home.notes : [];
+
   Future<void> fetchNotes() async {
-    await _api.fetchNotes();
+    _home = await _api.fetchNotes();
+    notifyListeners();
   }
 }

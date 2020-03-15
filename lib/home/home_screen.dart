@@ -1,5 +1,6 @@
 import 'package:dnote/base_view.dart';
 import 'package:dnote/home/home_screen_view_model.dart';
+import 'package:dnote/models/note.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -19,14 +20,20 @@ class HomeScreen extends StatelessWidget {
             padding: EdgeInsets.all(16),
             child: Column(
               children: [
-                Text("WELCOME",
-                  style:
-                  TextStyle(fontSize: 42, fontWeight: FontWeight.w500),)
+                Text(
+                  "WELCOME",
+                  style: TextStyle(fontSize: 42, fontWeight: FontWeight.w500),
+                ),
+                ...viewModel.notes.map((note) => _renderNote(note))
               ],
             ),
           ),
         ),
       ),
     );
+  }
+
+  Widget _renderNote(Note note) {
+    return Text(note.uuid.uuid);
   }
 }

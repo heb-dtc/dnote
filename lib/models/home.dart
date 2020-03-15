@@ -8,8 +8,11 @@ class Home {
 
   factory Home.fromJson(Map<String, dynamic> json) {
     return Home(
-      json['notes'].map((noteJson) => Note.fromJson(noteJson)),
+      jsonToNotes(json['notes']),
       json['total'],
     );
   }
 }
+
+List<Note> jsonToNotes(List<dynamic> json) =>
+    json.map((noteJson) => Note.fromJson(Map.from(noteJson))).toList();

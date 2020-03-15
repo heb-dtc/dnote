@@ -11,9 +11,10 @@ class ServerApi {
   ServerApi(this._serverConfiguration);
 
   Future<Home> fetchNotes() async {
-    final endPoint = _serverConfiguration.baseUrl + '/api/v3/notes?page=1';
+    Uri endPoint = Uri.parse(_serverConfiguration.baseUrl + '/api/notes');
+    endPoint.replace(queryParameters: {'page': '1'});
     final cookie = "id=${_serverConfiguration.token}; __stripe_mid=3187a7b7-2616-45c0-afda-c3e2298a7be7";
-    developer.log("fetch note -> " + endPoint);
+    developer.log("fetch note -> $endPoint");
 
     final homeResponse = await http.get(endPoint,
         headers: {
@@ -27,6 +28,7 @@ class ServerApi {
     }
 
     developer.log("error -> ${homeResponse.statusCode}");
+    developer.log("error -> ${homeResponse.body}");
 
     throw Future.error("");
   }

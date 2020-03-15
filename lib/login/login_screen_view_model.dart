@@ -38,11 +38,11 @@ class LoginScreenViewModel extends ChangeNotifier {
     }
   }
 
-  Future<http.Response> _signIn(String userName, String password) {
+  Future<http.Response> _signIn(String userName, String password) async {
     final endPoint = _serverUrl + '/api/v3/signin';
     developer.log("login @ " + endPoint);
 
-    return http.post(endPoint,
+    return await http.post(endPoint,
         headers: {
           'Content-Type': 'application/json; charset=UTF-8',
         },

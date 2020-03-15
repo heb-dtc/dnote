@@ -7,7 +7,7 @@ class Note {
   final String content;
   final int addedOn;
   final bool public;
-  final String usn;
+  final int usn;
   final Book book;
   final User user;
 
@@ -16,9 +16,9 @@ class Note {
 
   factory Note.fromJson(Map<String, dynamic> json) {
     return Note(
-      Id.fromJson(json['uuid']),
-      json['created_at'],
-      json['updated_at'],
+      Id(json['uuid']),
+      DateTime.parse(json['created_at']),
+      DateTime.parse(json['updated_at']),
       json['content'],
       json['added_on'],
       json['public'],
@@ -37,7 +37,7 @@ class Book {
 
   factory Book.fromJson(Map<String, dynamic> json) {
     return Book(
-      Id.fromJson(json['uuid']),
+      Id(json['uuid']),
       json['label'],
     );
   }
@@ -49,6 +49,6 @@ class Id {
   Id(this.uuid);
 
   factory Id.fromJson(Map<String, dynamic> json) {
-    return Id(json['uuid']);
+    return Id(json["uuid"]);
   }
 }
