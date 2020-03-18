@@ -84,7 +84,7 @@ class LoginScreen extends StatelessWidget {
       LoginScreenViewModel viewModel) async {
     await viewModel.login(name, password).then((token) {
       final serverConfiguration = Provider.of<ServerConfiguration>(context, listen: false);
-      serverConfiguration.token = token;
+      serverConfiguration.token = token.key;
       Navigator.pushNamed(context, "/home");
     }).catchError(_onError(context));
   }

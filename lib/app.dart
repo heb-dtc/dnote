@@ -8,6 +8,8 @@ import 'package:dnote/models/server_configuration.dart';
 import 'package:dnote/server/server_screen_view_model.dart';
 import 'package:dnote/server/server_url_screen.dart';
 import 'package:dnote/services/server_api.dart';
+import 'package:dnote/splash/splash_screen.dart';
+import 'package:dnote/splash/splash_screen_view_model.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -36,7 +38,8 @@ class _AppState extends State<App> {
           ),
           initialRoute: '/',
           routes: {
-            '/': (context) => LandingScreen(LandingScreenViewModel()),
+            '/': (context) => SplashScreen(SplashScreenViewModel()),
+            '/landing': (context) => LandingScreen(LandingScreenViewModel()),
             '/server': (context) => ServerUrlScreen(ServerScreenViewModel()),
             '/login': (context) => LoginScreen(LoginScreenViewModel()),
             '/home': (context) => HomeScreen(HomeScreenViewModel(ServerApi(_serverConfiguration))),

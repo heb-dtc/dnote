@@ -17,23 +17,52 @@ class HomeScreen extends StatelessWidget {
         appBar: AppBar(),
         body: SafeArea(
           child: Padding(
-            padding: EdgeInsets.all(16),
-            child: Column(
-              children: [
-                Text(
-                  "WELCOME",
-                  style: TextStyle(fontSize: 42, fontWeight: FontWeight.w500),
+              padding: EdgeInsets.all(16),
+              child: RefreshIndicator(
+                onRefresh: () => viewModel.fetchNotes(),
+                child: ListView(
+                  scrollDirection: Axis.vertical,
+                  children:
+                      viewModel.notes.map((note) => _renderNote(note)).toList(),
                 ),
-                ...viewModel.notes.map((note) => _renderNote(note))
-              ],
-            ),
-          ),
+              )),
         ),
       ),
     );
   }
 
   Widget _renderNote(Note note) {
-    return Text(note.uuid.uuid);
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Row(
+        children: [
+          Expanded(
+              child: Card(
+                  child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 8.0),
+                  child: Text(
+                    note.book.label,
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                ),
+                Text(
+                  note.content,
+                  maxLines: 4,
+                )
+              ],
+            ),
+          ))),
+        ],
+      ),
+    );
   }
 }
