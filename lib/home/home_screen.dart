@@ -1,6 +1,7 @@
 import 'package:dnote/base_view.dart';
 import 'package:dnote/home/home_screen_view_model.dart';
 import 'package:dnote/models/note.dart';
+import 'package:dnote/note/note_screen.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -14,51 +15,56 @@ class HomeScreen extends StatelessWidget {
       model: _viewModel,
       onModelReady: (viewModel) => viewModel.fetchNotes(),
       builder: (context, viewModel, child) => Scaffold(
-        appBar: AppBar(),
-        body: SafeArea(
-          child: Padding(
-              padding: EdgeInsets.all(16),
-              child: RefreshIndicator(
-                onRefresh: () => viewModel.fetchNotes(),
-                child: ListView(
-                  scrollDirection: Axis.vertical,
-                  children:
-                      viewModel.notes.map((note) => _renderNote(note)).toList(),
-                ),
-              )),
+        appBar: AppBar(
+          title: Text("WELCOME"),
         ),
+        body: SafeArea(
+            child: Padding(
+          padding: EdgeInsets.all(8),
+          child: RefreshIndicator(
+              onRefresh: () => viewModel.fetchNotes(),
+              child: _renderNotes(viewModel.notes)),
+        )),
       ),
     );
   }
 
-  Widget _renderNote(Note note) {
+  Widget _renderNotes(List<Note> notes) => ListView.builder(
+      itemCount: notes.length,
+      itemBuilder: (context, index) => _renderNote(context, notes[index]));
+
+  Widget _renderNote(BuildContext context, Note note) {
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: const EdgeInsets.all(4.0),
       child: Row(
         children: [
           Expanded(
               child: Card(
-                  child: Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(bottom: 8.0),
-                  child: Text(
-                    note.book.label,
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w500,
+                  child: InkWell(
+            onTap: () => Navigator.of(context)
+                .pushNamed(NoteScreen.routeName, arguments: note),
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 16.0),
+                    child: Text(
+                      note.book.label,
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.w800,
+                      ),
                     ),
                   ),
-                ),
-                Text(
-                  note.content,
-                  maxLines: 4,
-                )
-              ],
+                  Text(
+                    note.content,
+                    maxLines: 4,
+                  )
+                ],
+              ),
             ),
           ))),
         ],
