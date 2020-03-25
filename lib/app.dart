@@ -8,6 +8,8 @@ import 'package:dnote/models/note.dart';
 import 'package:dnote/models/server_configuration.dart';
 import 'package:dnote/note/note_screen.dart';
 import 'package:dnote/note/note_screen_view_model.dart';
+import 'package:dnote/notes/notes_screen.dart';
+import 'package:dnote/notes/notes_screen_view_model.dart';
 import 'package:dnote/server/server_screen_view_model.dart';
 import 'package:dnote/server/server_url_screen.dart';
 import 'package:dnote/services/server_api.dart';
@@ -58,6 +60,10 @@ class _AppState extends State<App> {
                 return MaterialPageRoute(
                     builder: (_) => HomeScreen(
                         HomeScreenViewModel(ServerApi(_serverConfiguration))));
+              case '/notes':
+                return MaterialPageRoute(
+                    builder: (_) => NotesScreen(
+                        NotesScreenViewModel(ServerApi(_serverConfiguration))));
               case '/note':
                 var note = settings.arguments as Note;
                 return MaterialPageRoute(

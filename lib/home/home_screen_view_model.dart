@@ -10,10 +10,7 @@ class HomeScreenViewModel extends ChangeNotifier {
 
   HomeScreenViewModel(this._api);
 
-  List<Note> get notes => _home != null ? _home.notes : [];
+  Future<void> fetchHome() async {
 
-  Future<void> fetchNotes() async {
-    _home = await _api.fetchNotes();
-    notifyListeners();
   }
 }
