@@ -1,6 +1,5 @@
 import 'dart:convert';
 
-import 'package:dnote/models/home.dart';
 import 'package:dnote/models/note_list.dart';
 import 'package:dnote/models/server_configuration.dart';
 import 'package:http/http.dart' as http;

@@ -20,6 +20,24 @@ class HomeScreen extends StatelessWidget {
               appBar: AppBar(
                 title: Text("WELCOME"),
               ),
+              floatingActionButtonLocation:
+                  FloatingActionButtonLocation.centerDocked,
+              floatingActionButton: FloatingActionButton.extended(
+                elevation: 2.0,
+                icon: Icon(Icons.add),
+                label: const Text('Add note'),
+                onPressed: () {}
+              ),
+              bottomNavigationBar: BottomAppBar(
+                elevation: 2.0,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: <Widget>[
+                    IconButton(icon: Icon(Icons.menu), onPressed: () {},),
+                    IconButton(icon: Icon(Icons.search), onPressed: () {},),
+                  ],
+                ),
+              ),
               body: SafeArea(
                 child: Center(
                   child: Column(
@@ -28,6 +46,11 @@ class HomeScreen extends StatelessWidget {
                     children: [
                       RaisedButton(
                         child: Text("BOOKS"),
+                        onPressed: () => Navigator.of(context)
+                            .pushNamed(NotesScreen.routeName),
+                      ),
+                      RaisedButton(
+                        child: Text("NOTES"),
                         onPressed: () => Navigator.of(context)
                             .pushNamed(NotesScreen.routeName),
                       ),
